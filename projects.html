@@ -17,28 +17,27 @@ title: Projetos
 <section class="ftco-section">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-8">
+			<div class="col">
 				<div class="row">
-					{% for post in site.posts %}
-						{% if post.projects %}
-							<div class="col-md-6">
-								<div class="blog-entry ftco-animate">
-									<!--<a href="#" class="img img-2" style="background-image: url(images/image_1.jpg);"></a>-->
-									<div class="text text-2 pt-2 mt-3">
-										<span class="category mb-3 d-block">{{post.project_language}}</span>
-										<h3 class="mb-4"><a href="{{post.url}}">{{ post.title }}</a></h3>
-										<p class="mb-4">{{ post.description }}</p>
-										<div class="author mb-4 d-flex align-items-center">
-											<a href="#" class="img" style="background-image: url({{post.author_photo}});"></a>
-											<div class="ml-3 info">
-												<span>Written by</span>
-												<h3><a href="#">{{post.author}}</a>, <span>{{post.date | date: "%b %d %Y"}}</span></h3>
-											</div>
+					{% assign repos = site.data.repos | sort: 'created_at' | reverse %}
+					{% for repo in repos %}
+						<div class="col-lg-4">
+							<div class="blog-entry ftco-animate">
+								<!--<a href="#" class="img img-2" style="background-image: url(images/image_1.jpg);"></a>-->
+								<div class="text text-2 pt-2 mt-3">
+									<span class="category mb-3 d-block">{{repo.language}}</span>
+									<h3 class="mb-4"><a href="{{repo.html_url}}">{{ repo.name }}</a></h3>
+									<p class="mb-4">{{ repo.description }}</p>
+									<div class="author mb-4 d-flex align-items-center">
+										<a href="{{repo.owner.url}}" class="img" style="background-image: url({{repo.owner.avatar_url}});"></a>
+										<div class="ml-3 info">
+											<span>Written by</span>
+											<h3><a href="{{repo.owner.url}}">{{repo.owner.login}}</a>, <span>{{repo.created_at | date: "%b %d %Y"}}</span></h3>
 										</div>
 									</div>
 								</div>
-							</div><!-- END COL-md-6-->
-						{% endif %}
+							</div>
+						</div><!-- END COL-lg-6-->
 					{% endfor %}
 				</div><!-- END row-->
 			</div>

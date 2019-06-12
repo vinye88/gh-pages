@@ -1,6 +1,7 @@
 .DS_Store
 _site
-.sass-cache
-Gemfile.lock
-.bundle
 vendor/
+_data/
+.sass-cache
+.bundle
+Gemfile.lock
