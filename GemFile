@@ -2,9 +2,4 @@ source 'http://rubygems.org'
 
 gem 'github-pages'
 gem 'html-proofer'
-gem 'hash-joiner'
-gem "jekyll"
-gem 'json'
-gem 'deep_merge'
-gem 'open-uri'
 gem 'jekyll-get-json'
