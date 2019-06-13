@@ -19,7 +19,7 @@ title: Projetos
 		<div class="row">
 			<div class="col">
 				<div class="row">
-					{% assign repos = site.data.repos | sort: 'created_at' | reverse %}
+					{% assign repos = site.github.public_repositories | sort: 'created_at' | reverse %}
 					{% for repo in repos %}
 						<div class="col-lg-4">
 							<div class="blog-entry ftco-animate">
