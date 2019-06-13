@@ -4,7 +4,7 @@ permalink: /:title
 jekyll_get_json:
   data: repos
   json: 'https://api.github.com/users/vinye88/repos'
-  #cache: true
+  cache: true
 
 plugins:
   - jekyll-get-json
