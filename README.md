@@ -9,4 +9,3 @@ You can run it locally if you:
 
 - [Colorlib](https://colorlib.com) for html templates.
 - [Sérgio Kopplin](https://github.com/sergiokopplin) for [Indigo](https://github.com/sergiokopplin/indigo) idea.
-- [18F](https://github.com/18F) for [jekyll-get](https://github.com/18F/jekyll-get) plugin.
