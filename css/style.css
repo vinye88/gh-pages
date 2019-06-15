@@ -8260,7 +8260,7 @@ textarea.form-control {
 
 .tagcloud {
   padding: 0; }
-  .tagcloud a {
+  .tagcloud a, .tagcloud div {
     text-transform: uppercase;
     display: inline-block;
     padding: 4px 10px;

@@ -1,23 +1,28 @@
 ---
 layout: default
 title: Projetos
+header_bg_img: bg_3_gs.jpg
 ---
-<div class="hero-wrap js-fullheight" style="background-image: url(images/bg_3_gs.jpg);" data-stellar-background-ratio="0.5">
-	<div class="overlay"></div>
-	<div class="js-fullheight d-flex justify-content-center align-items-center">
-		<div class="col-md-8 text text-center">
-			<!--<div class="img mb-4" style="background-image: url(images/author.jpg);"></div>-->
-			<div class="desc">
-				<h1 class="mb-4">Projetos</h1>
-				<p class="mb-4">Aqui vem uma descrição do que encontrar nesta página...</p>
-			</div>
-		</div>
-	</div>
-</div>
+{% capture heading %}
+<h1 class="mb-4">Projetos</h1>
+<p class="mb-4">Aqui vem uma descrição do que encontrar nesta página...</p>
+{% endcapture %}
+{% include content-header.html content=heading %}
+
 <section class="ftco-section">
 	<div class="container">
 		<div class="row">
 			<div class="col">
+				<div class="row">
+					<div class="sidebar-box ftco-animate fadeInUp ftco-animated">
+						<h3 class="sidebar-heading">Áreas de Interesse</h3>
+						<div class="tagcloud">
+							{% for a in (1..6) %}
+								<div class="tag-cloud-link">Area {{a}}</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
 				<div class="row">
 					{% assign repos = site.github.public_repositories | sort: 'created_at' | reverse %}
 					{% for repo in repos %}
@@ -37,10 +42,10 @@ title: Projetos
 									</div>
 								</div>
 							</div>
-						</div><!-- END COL-lg-6-->
+						</div>
 					{% endfor %}
-				</div><!-- END row-->
+				</div>
 			</div>
-		</div><!-- END COL-lg-8-->
-	</div><!-- END container-->
+		</div>
+	</div>
 </section>
