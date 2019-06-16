@@ -4,10 +4,14 @@ title: Início
 header_bg_img: bg_1.jpg
 header_img_bubble: author.jpg
 ---
-{% capture heading %}
-<h2 class="subheading">Olá, eu sou o</h2>
-<h1 class="mb-4">{{ site.owner }}</h1>
-<p class="mb-4">I am A Blogger Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-<p><a href="#" class="btn-custom">Descubra mais sobre mim<span class="ion-ios-arrow-forward"></span></a></p>
+{% capture paragraph %}
+I am A Blogger Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+<p><a href="#" class="btn-custom">Descubra mais sobre mim <span class="ion-ios-arrow-forward"></span></a></p>
 {% endcapture %}
-{% include content-header.html content=heading %}
+{%
+    include content-header.html
+    subheading="Olá, eu sou o"
+    heading="Vinícius Damasceno"
+    subtitle="Aqui vem uma descrição do que encontrar nesta página..."
+    paragraph=paragraph
+%}

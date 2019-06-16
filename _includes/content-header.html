@@ -6,7 +6,11 @@
             <div class="img mb-4" style="background-image: url(images/{{page.header_img_bubble}});"></div>
             {% endif %}
             <div class="desc">
-                {{ heading }}
+                {% if include.subheading %} 
+                <h2 class="subheading">{{include.subheading}}</h2>
+                {% endif %}
+                <h1 class="mb-4">{{include.heading}}</h1>
+                <p class="mb-4">{{include.paragraph}}</p>
             </div>
         </div>
     </div>
